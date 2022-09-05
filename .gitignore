@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+migrations/
 
 # C extensions
 *.so
@@ -131,3 +132,5 @@ dmypy.json
 
 # Key
 Api.txt
+
+

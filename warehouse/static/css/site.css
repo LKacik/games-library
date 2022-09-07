@@ -11,6 +11,10 @@ header {
   font-family: 'Lobster';
   }
 
+a:link, a:visited {
+ text-decoration: none;
+}
+
 .sidebar {
   margin: 0;
   padding: 0;
@@ -21,19 +25,27 @@ header {
   overflow: auto;
   font-family: 'Arial';
   font-size: 18px;
+
+}
+
+.sidebar ul{
+  list-style: none;
+}
+
+.sidebar ul img {
+ margin: 16px;
+
+}
+
+.sidebar a:visited  {
   color: #C3073F;
 }
 
-
-.sidebar a.active {
-  background-color: #C3073F;
-  color: white;
-}
-
-.sidebar a:hover:not(.active) {
+.sidebar a:hover {
   background-color: #4E4E50;
-  color: white;
+  color: #C3073F;
 }
+
 
 .content {
   margin-left: 200px;

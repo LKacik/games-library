@@ -19,5 +19,9 @@ from warehouse import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.main)
+    path('', views.main, name='main'),
+    path('add', views.add, name='add'),
+    path('remove', views.remove, name='remove'),
+    path('edit', views.edit, name='edit'),
+    path('search', views.search, name='search'),
 ]

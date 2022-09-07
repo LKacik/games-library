@@ -20,28 +20,34 @@
     <div class="sidebar">
         <ul>
             <li>
-                <a href="#collection">collection</a>
+                <img src="static/img/collection_icon.png" width="24px" height="=24px"/>
+                <a class="a-main" href="{% url 'main' %}"><b>collection</b></a>
             </li>
             <li>
-
                 <img src="static/img/add_icon.png" width="24px" height="=24px"/>
-
-                <a href="#menu2">add</a>
-
+                <a href="{% url 'add' %}"><b>add</b></a>
             </li>
             <li>
                 <img src="static/img/remove_icon.png" width="24px" height="=24px"/>
-                <a href="#menu3">remove</a>
+                <a href="{% url 'remove' %}"><b>remove</b></a>
             </li>
             <li>
+                <img src="static/img/edit_icon.png" width="24px" height="=24px"/>
+                <a href="{% url 'edit' %}"><b>edit</b></a>
+            </li>
+
+            <li>
                 <img src="static/img/search_icon.png" width="24px" height="=24px"/>
-                <a href="#menu4">search</a>
+                <a href="{% url 'search' %}"><b>search</b></a>
             </li>
         </ul>
     </div>
     <div class="content">
         <div>
-            <img src="static/img/Civilization_front.jpg" width="100px" height="=150px"/>
+            {% block content %}
+                        <img src="static/img/Civilization_front.jpg" width="100px" height="=150px"/>
+
+            {% endblock %}
         </div>
     </div>
 </main>

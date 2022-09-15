@@ -21,5 +21,5 @@ class Games(models.Model):
     released = models.DateField(default='1992-11-28')
     developers = models.CharField(max_length=64, default='Sensible Software')
 
-
-
+    def __str__(self):
+        return self.name

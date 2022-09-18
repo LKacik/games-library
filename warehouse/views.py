@@ -1,11 +1,18 @@
 from django.shortcuts import render
+from .models import Games, AddGame
+from .forms import PostForm
+from .utils import add_new_game
 
 
 def main(request):
-    return render(request, 'main.html')
+    objs = Games.objects.all()
+    return render(request, 'main.html', {'objs': objs})
 
 
 def add(request):
+    if request.method == "POST":
+        new_title = request.POST.get('title')
+        add_new_game(new_title)
     return render(request, 'add.html')
 
 

@@ -3,5 +3,9 @@
 {% block content %}
 
 <p> Dodawanie gier do kolekcji</p>
-
+<form method="POST">
+    {% csrf_token %}
+    Enter Game Title : <input type="text" name="title"><br>
+    <button type="submit">Add Game</button>
+</form>
 {% endblock %}

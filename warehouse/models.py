@@ -23,3 +23,10 @@ class Games(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class AddGame(models.Model):
+    title = models.CharField(max_length=64)
+
+    def __str__(self):
+        return self.title

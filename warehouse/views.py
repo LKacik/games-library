@@ -1,4 +1,7 @@
 from django.shortcuts import render
+from django.urls import reverse_lazy
+from django.views.generic import DeleteView
+
 from .models import Games, AddGame
 from .forms import PostForm
 from .utils import add_new_game
@@ -18,6 +21,12 @@ def add(request):
 
 def remove(request):
     return render(request, 'remove.html')
+
+
+class Delete(DeleteView):
+    model = Games
+    success_url = reverse_lazy('main')
+    template_name = 'remove.html'
 
 
 def edit(request):

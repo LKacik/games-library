@@ -41,18 +41,38 @@ a:link, a:visited {
   color: #C3073F;
 }
 
+
 .sidebar a:hover {
   background-color: #4E4E50;
   color: #C3073F;
+  font-size: 20px;
 }
 
 
 .content {
   margin-left: 200px;
   padding: 1px 16px;
+  background-color: #4E4E50;
+
 
 }
 
-body{
+body {
   background-color: #4E4E50;
+}
+
+.container {
+  background-color: #4E4E50;
+
+
+}
+
+.album {
+  background-color: #4E4E50;
+
+}
+
+.card-body {
+  background-color: #4E4E50;
+
 }

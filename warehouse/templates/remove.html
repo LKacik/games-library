@@ -3,5 +3,12 @@
 {% block content %}
 
 <p> Usuwanie gier z kolekcji</p>
+<div class="container pt-5">
+    <form method="POST">
+        {% csrf_token %}
+        <p>Are you suere you want to delete "{{ object }}" </p>
+        <input type="submit" value="Confirm">
+    </form>
+</div>
 
 {% endblock %}

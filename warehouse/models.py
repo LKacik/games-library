@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import reverse
+
 
 # Create your models here.
 
@@ -24,9 +26,13 @@ class Games(models.Model):
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return reverse('single', args=[self.slug])
 
 class AddGame(models.Model):
     title = models.CharField(max_length=64)
 
     def __str__(self):
         return self.title
+
+

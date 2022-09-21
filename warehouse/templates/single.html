@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends 'main.html' %}
+{% block content %}
+<div class="container">
+    <div class="col-12 pt-5">
+        <img class="card-img-top" src={{game.image}} width="100" height="225"/>
+        <h2 class="pt-5">{{game.name}}</h2>
+        <p>{{game.description}}</p>
+    </div>
+</div>
+<div class="d-flex justify-content-between align-items-center">
+    <p><small class="text-muted">{{game.developers}}</small></p>
+    <p><small class="text-muted">{{game.released}}</small></p>
+    <p><small class="text-muted">{{game.platform}}</small></p>
+</div>
+{% endblock %}

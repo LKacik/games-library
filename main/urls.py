@@ -22,8 +22,8 @@ urlpatterns = [
     path('', views.main, name='main'),
     path('add/', views.add, name='add'),
     path('remove/', views.remove, name='remove'),
-    path('edit/', views.edit, name='edit'),
     path('search/', views.search, name='search'),
     path('delete/<int:pk>/', views.Delete.as_view(), name='delete'),
     path('<slug:slug>/', views.SingleView.as_view(), name='single'),
+    path('edit/<int:pk>/', views.EditView.as_view(), name='edit'),
 ]

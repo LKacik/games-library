@@ -34,9 +34,8 @@
             </li>
             <li>
                 <img src="static/img/edit_icon.png" width="24px" height="=24px"/>
-                <a href="{% url 'edit' %}"><b>edit</b></a>
+                <a class="a-main" href="{% url 'main' %}"><b>edit</b></a>
             </li>
-
             <li>
                 <img src="static/img/search_icon.png" width="24px" height="=24px"/>
                 <a href="{% url 'search' %}"><b>search</b></a>
@@ -62,7 +61,7 @@
                 <div class="btn-group">
 <!--                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>-->
                     <a href="{{ game.get_absolute_url }}" class="btn btn-sm btn-outline-primary" role="button" aria-pressed="true">View</a>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    <a href="{% url 'edit' game.pk %}" class="btn btn-sm btn-outline-secondary" role="button" aria-pressed="true">Edit</a>
                     <a href="{% url 'delete' game.pk %}" class="btn btn-sm btn-outline-secondary" role="button" aria-pressed="true">Del</a>
                 </div>
                   <p><small class="text-muted">{{game.developers}}</small></p>

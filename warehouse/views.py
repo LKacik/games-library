@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import DeleteView, DetailView
+from django.views.generic import DeleteView, DetailView, UpdateView
 
 from .models import Games, AddGame
 from .forms import PostForm
@@ -33,6 +33,14 @@ class SingleView(DetailView):
     model = Games
     template_name = 'single.html'
     context_object_name = 'game'
+
+
+class EditView(UpdateView):
+    model = Games
+    template_name = 'edit.html'
+    fields = '__all__'
+    pk_url_kwarg = 'pk'
+    success_url = reverse_lazy('main')
 
 
 def edit(request):

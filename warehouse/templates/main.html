@@ -44,42 +44,45 @@
     </div>
     <div class="content">
 
-            {% block content %}
+        {% block content %}
         <div class="album py-5">
-    <div class="container">
+            <div class="container">
 
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
-        {% for game in objs %}
-        <div class="col">
-          <div class="card shadow-sm">
-            <img class="bd-placeholder-img card-img-top" src={{game.image}} width="100%" height="225"/>
+                    {% for game in objs %}
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img class="bd-placeholder-img card-img-top" src={{game.image}} width="100%" height="225"/>
 
-            <div class="card-body">
-              <p class="card-text">{{game.name}}</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-<!--                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>-->
-                    <a href="{{ game.get_absolute_url }}" class="btn btn-sm btn-outline-primary" role="button" aria-pressed="true">View</a>
-                    <a href="{% url 'edit' game.pk %}" class="btn btn-sm btn-outline-secondary" role="button" aria-pressed="true">Edit</a>
-                    <a href="{% url 'delete' game.pk %}" class="btn btn-sm btn-outline-secondary" role="button" aria-pressed="true">Del</a>
+                            <div class="card-body">
+                                <p class="card-text">{{game.name}}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <!--                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>-->
+                                        <a href="{{ game.get_absolute_url }}" class="btn btn-sm btn-outline-primary"
+                                           role="button" aria-pressed="true">View</a>
+                                        <a href="{% url 'edit' game.pk %}" class="btn btn-sm btn-outline-secondary"
+                                           role="button" aria-pressed="true">Edit</a>
+                                        <a href="{% url 'delete' game.pk %}" class="btn btn-sm btn-outline-secondary"
+                                           role="button" aria-pressed="true">Del</a>
+                                    </div>
+                                    <p><small class="text-muted">{{game.developers}}</small></p>
+                                    <p><small class="text-muted">{{game.released}}</small></p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% endfor %}
+
                 </div>
-                  <p><small class="text-muted">{{game.developers}}</small></p>
-                  <p><small class="text-muted">{{game.released}}</small></p>
-
-              </div>
             </div>
-          </div>
         </div>
 
-        {% endfor %}
-
-      </div>
+        {% endblock %}
     </div>
-  </div>
-
-            {% endblock %}
-        </div>
     </div>
 </main>
 </body>

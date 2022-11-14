@@ -9,6 +9,7 @@ header {
   background: #1A1A1D;
   font-size: 10px;
   font-family: 'Lobster';
+  width: auto;
   }
 
 a:link, a:visited {
@@ -53,6 +54,7 @@ a:link, a:visited {
   margin-left: 200px;
   padding: 1px 16px;
   background-color: #4E4E50;
+  scroll-behavior: smooth;
 
 
 }
@@ -63,12 +65,16 @@ body {
 
 .container {
   background-color: #4E4E50;
+  padding-bottom: 20px;
 
 
 }
 
 .album {
   background-color: #4E4E50;
+  height: 800px;
+  overflow: overlay;
+  position: absolute;
 
 }
 
@@ -79,11 +85,14 @@ body {
 
 .card-img-top {
     width: auto;
+    border-radius: 5px;
+    border-style: solid;
+
 }
 
-.text-muted {
+.d-flex {
     border-width: 2px;
-    padding: 10px;
+    padding: 2px;
     border-style: solid;
     border-color:  #C3073F;
     border-radius: 5px;
